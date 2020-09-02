@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2020 at 05:29 PM
+-- Generation Time: Sep 02, 2020 at 09:57 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -87,6 +87,25 @@ INSERT INTO `activity_statistics` (`Stat_ID`, `Date`, `Weight`, `StepCount`, `Di
 (33, '2020-09-01', '91.00', 3021, '2.08', '00:31:15', '15.01', '8.55', 97, 138, 66, '3.99', '0.00', 73, 111, 139, 85),
 (34, '2020-09-01', '90.60', 3174, '2.22', '00:30:36', '13.47', '3.40', 104, 120, 68, '4.35', '0.00', 78, 110, 127, 86);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `LoginId` int(11) NOT NULL,
+  `Username` varchar(30) NOT NULL,
+  `Password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`LoginId`, `Username`, `Password`) VALUES
+(1, 'Rob', 'R0b');
+
 --
 -- Indexes for dumped tables
 --
@@ -98,6 +117,12 @@ ALTER TABLE `activity_statistics`
   ADD PRIMARY KEY (`Stat_ID`);
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`LoginId`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -106,6 +131,12 @@ ALTER TABLE `activity_statistics`
 --
 ALTER TABLE `activity_statistics`
   MODIFY `Stat_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `LoginId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
